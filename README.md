@@ -1,6 +1,8 @@
 # Voron 2.4 AES System - Auto Emergency Stop For Klicky Probe
 Save your printer with this Auto E STOP System to catch Z Homing errors using a nozzle triggered endstop switch.
 
+Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
+
 You're probably thinking you dont need this & that you printer always works & it'll be fine. Yea thats true until it isn't!
 All it takes is a single homing error or failure to totally ruin your print surface when you nozzle ploughs into it & then gets dragged round it when you strat a print!
 
@@ -106,7 +108,8 @@ Once it changed from `RELEASED` to `PUSHED` you're there!
 
 Or.....
 
-If you want an automatic notification uncomment the two `RESPOND` lines in the `gcode_button` `press_gcode` & `release_gcode`
+If you want an automatic notification uncomment the two `RESPOND` lines in the `[gcode_button AES_System_Sensor]` / `press_gcode` & `release_gcode`
+
 Just remember to comment them out again when you're finished as they're just for testing & setup.
 
 Once complete you can real-world test the system in two ways. The first is to raise up Z to like `Z150` for example & hit `Home_Z`, once the printer is coming back down touch a metal object to your new sensor. This should activate the AES System & stop your printer.
@@ -126,4 +129,7 @@ Now slowly lower the nozzle to the bed, the AES system should trigger the `Emerg
 If it does not repeat with the nozzle off the edge of the bed to find the activation point (BE CAREFUL!!), or touch the probe tip with the metal object again if the activation point cannot be found.
 If activation point is too high or low - move probe height to correct.
 If probe doesn’t activate with the motor casing but does with a metal object move probe closer to the motor casing.
+
+
+Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
 
