@@ -1,7 +1,8 @@
 # Voron 2.4 AES System - Auto Emergency Stop For Klicky Probe
 Save your printer with this Auto E STOP System to catch Z Homing errors using a nozzle triggered endstop switch.
 
-Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
+[<img width="171" alt="kofi_s_tag_dark" src="https://github.com/3DPrintDemon/Voron_2.4_AES_System_Auto_Emergency_Stop_For_Klicky_Probe/assets/122202359/8f542c7a-b302-49c6-94fe-76749f321f65">](https://ko-fi.com/3dprintdemon)
+## Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
 
 You're probably thinking you dont need this & that you printer always works & it'll be fine. Yea thats true until it isn't!
 All it takes is a single homing error or failure to totally ruin your print surface when you nozzle ploughs into it & then gets dragged round it when you strat a print!
@@ -130,6 +131,6 @@ If it does not repeat with the nozzle off the edge of the bed to find the activa
 If activation point is too high or low - move probe height to correct.
 If probe doesn’t activate with the motor casing but does with a metal object move probe closer to the motor casing.
 
-
-Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
+[<img width="171" alt="kofi_s_tag_dark" src="https://github.com/3DPrintDemon/Voron_2.4_AES_System_Auto_Emergency_Stop_For_Klicky_Probe/assets/122202359/8f542c7a-b302-49c6-94fe-76749f321f65">](https://ko-fi.com/3dprintdemon)
+## Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
 
