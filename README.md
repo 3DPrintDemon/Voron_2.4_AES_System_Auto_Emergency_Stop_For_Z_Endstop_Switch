@@ -12,7 +12,9 @@ A friend of mine just had his $70 350x350 bed totally trashed by this exact thin
 
 So I came up with this idea! Basically consider it an insurance policy for your printer. Think of it like a smoke detector for your house, or seat belt in your car - it’s better to have them & not need them than it is to need them & not have them, & that one day when you do need them they could well save everything!
 
-The system uses an inductive probe to trigger an automatic `Emergency Stop` when it senses the gantry is too low for the correct Z position `Z0` when Homing Z. The system lays ready but disarmed, then becomes armed once you hit `Home Z` & will trigger if your nozzle misses the Z endstop switch & the gantry lowers past its noraml Z0 position. It disarms itself once Z homing is complete.
+The system uses an inductive probe to trigger an automatic `Emergency Stop` when it senses the gantry is too low for the correct Z position `Z0` when Homing Z. 
+
+The system lays ready but disarmed during normal operation & printing, then becomes armed as soon as you hit `Home Z` & will trigger if your nozzle misses the Z endstop switch & the gantry lowers past its noraml Z0 position. It disarms itself once Z homing is complete.
 
 # REQUIRED PARTS
 
