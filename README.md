@@ -27,25 +27,25 @@ Head over to printables to grab the STL: https://www.printables.com/model/722483
 # INSTALL
 
 - Install the `AES System Sensor Mount` onto the rear left corner of your printer's 20x20 extrusion, with about 10-15mm clearance from your B motor when the nozzle is on the bed. USE THREADLOCK!
-- Now add the Probe to your bracket, set the tip of the probe so its 1mm from the housing of the B motor. USE THREADLOCK!
+- Now add the Probe to your sensor mount, set the tip of the probe so its 1mm from the housing of the B motor. USE THREADLOCK!
 - Connect the wires to your board & define the correct pin.
-- My probe's wiring was a follows. Yours may differ. Brown=+, Blue=-, Black=Signal, White=Temp.
+- My probe's wiring was as follows. Yours may differ. Brown=+, Blue=-, Black=Signal, White=Temp.
 - We dont need temp & its not good for accurate readings anyway so cut that back & insulate.
 
 
 # CONFIGURING THE SYSTEM
 
 This will require you to edit the `Klicky-Macros.cfg` file. Dont worry it's super simple edits. This file is located in your printer's `config` folder inside the `Klicky` folder.
-open the file & CTRL+F & search:
+Open the file & CTRL+F & search:
 ```
 [gcode_macro _Home_Z_]
 ```
-Now on `Line Number 836` add this code:
+Now on empty `Line Number 836` add this code:
 ```
 SET_GCODE_VARIABLE MACRO=_AES_SYS VARIABLE=e_stop_armed VALUE=True # AES SYSTEM
 _AES_READ # AES SYSTEM
 ```
-Then on `Line Number 863` add this code:
+Then on empty `Line Number 863` add this code:
 ```
 SET_GCODE_VARIABLE MACRO=_AES_SYS VARIABLE=e_stop_armed VALUE=False # AES SYSTEM
 _AES_READ # AES SYSTEM
@@ -55,7 +55,7 @@ Then DOUBLE CHECK YOUR WORK!
 
 All good? Ok `Save & Exit`
 
-If you have a `Macros.cfg` add the following macros there. If you dont have a `Macros.cfg` I recomend you make one.
+If you have a `Macros.cfg` add the following macros there. If you dont have a `Macros.cfg` I recommend you make one.
 ```
 [gcode_macro _AES_SYS]
 variable_e_stop_armed: False
@@ -64,7 +64,7 @@ gcode:
 [gcode_macro _AES_READ]
 gcode:
  {% set aes_vars = printer["gcode_macro _AES_SYS"] %}
- {% if aes_vars.e_stop_armed == True%}
+ {% if aes_vars.e_stop_armed == True %}
    RESPOND TYPE=COMMAND MSG="Homing Z AES System ARMED"
  {% else %}
    RESPOND TYPE=COMMAND MSG="AES System DISAMRED"
@@ -92,29 +92,29 @@ release_gcode:
 ```
 You will obviously need to add your own pin you're using here & possibly a `!` between the `^` & your pin number, (so e.g `^!###`) if you have a `NO Probe` (Normally Open Probe) & not a `NC Probe` (Normally Closed Probe). 
 
-NOTE: If you have an `NO Probe` you may also need to swap the lines under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
+NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
 # SETTING UP THE PRINTER
 
-After adding the required lines to your .cfg files you'll need to spend some time setting the height of the probe so it activates between the Z endstop activation point & the nozzle touching the bed surface (Z0).
+After adding the required lines to your .cfg files you'll need to spend some time setting the height & distance of the probe so it activates between the Z endstop switch's activation point & the nozzle touching the bed surface `Z0`.
 This can be a bit tricky & can take a bit of time.
 
-You'll need to home the printer then move the nozzle down to Z5.0 then slowly lower it until you find the probe's triggering point & check to see if its between the two points mentioned above, if not move the probe until you get the correct position. THIS IS VITALLY IMPORTANT TO GET CORRECT!
+You'll need to home the printer then move the nozzle down to `Z5.0` then slowly lower it until you find the probe's triggering point & check to see if its between the two points mentioned above, if not move the probe until you get the correct position. THIS IS VITALLY IMPORTANT TO GET CORRECT!
 
 To check the probe activation point you can use:
 ```
 QUERY_BUTTON button=AES_System_Sensor
 ```
 
-Once it changed from `RELEASED` to `PUSHED` you're there!
+Once it changes from `RELEASED` to `PUSHED` you're there!
 
 Or.....
 
-If you want an automatic notification uncomment the two `RESPOND` lines in the `[gcode_button AES_System_Sensor]` / `press_gcode` & `release_gcode`
+If you want an automatic notification uncomment the two `RESPOND` lines in `[gcode_button AES_System_Sensor]` / `press_gcode` & `release_gcode`
 
 Just remember to comment them out again when you're finished as they're just for testing & setup.
 
-Once complete you can real-world test the system in two ways. The first is to raise up Z to like `Z150` for example & hit `Home_Z`, once the printer is coming back down touch a metal object to your new sensor. This should activate the AES System & stop your printer.
+Once complete you can real-world test the system in two ways. The first is to raise up Z to at least `Z150` for example & hit `Home_Z`, once the printer is coming back down touch a metal object to your new sensor. This should activate the AES System & stop your printer.
 
 The second way is to `Home_All` & then move the nozzle to `Z5.0`. Now send:
 ```
