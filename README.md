@@ -29,7 +29,7 @@ Head over to printables to grab the STL: link to be added
 - We dont need temp & its not good for accurate readings anyway so cut that back & insulate.
 
 
-# CODE SETUP
+# CONFIGURING THE SYSTEM
 
 This will require you to edit the `Klicky_Macros` file. Dont worry it's super simple edits.
 open the file & CTRL+F & search:
@@ -90,7 +90,7 @@ You will obviously need to add your own pin you're using here & possibly a `!` b
 
 NOTE: If you have an `NO Probe` you may also need to swap the lines under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
-# CONFIGURING THE SYSTEM
+# SETTING UP THE PRINTER
 
 After adding the required lines to your .cfg files you'll need to spend some time setting the height of the probe so it activates between the Z endstop activation point & the nozzle touching the bed surface (Z0).
 This can be a bit tricky & can take a bit of time.
