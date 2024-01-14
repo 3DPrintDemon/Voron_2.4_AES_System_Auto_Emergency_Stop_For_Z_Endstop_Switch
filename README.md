@@ -34,7 +34,7 @@ Head over to printables to grab the STL: link to be added
 
 # CONFIGURING THE SYSTEM
 
-This will require you to edit the `Klicky_Macros` file. Dont worry it's super simple edits.
+This will require you to edit the `Klicky-Macros.cfg` file. Dont worry it's super simple edits. This file is located in your printer's `config` folder insde the `Klicky` folder.
 open the file & CTRL+F & search:
 ```
 [gcode_macro _Home_Z_]
