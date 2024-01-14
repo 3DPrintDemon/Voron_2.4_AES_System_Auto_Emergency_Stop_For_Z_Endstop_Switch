@@ -10,7 +10,7 @@ Yeah thats true until it isn't! All it takes is a single homing error or failure
 
 A friend of mine just had his $70 350x350 bed totally trashed by this exact thing, for some reason his nozzle hit the endstop off-centre & the Z offset was about 3mm wrong, as you can imagine there were some bad noises & lots of broken things!
 
-So I came up with this idea! Basically consider it an insurance policy for your printer. Think of it like a smoke detector for your house, or seat belt in your car - it’s better to have them & not need them than it is to need them & not have them, & that one day when you do need them they could well save everyhting!
+So I came up with this idea! Basically consider it an insurance policy for your printer. Think of it like a smoke detector for your house, or seat belt in your car - it’s better to have them & not need them than it is to need them & not have them, & that one day when you do need them they could well save everything!
 
 # REQUIRED PARTS
 
