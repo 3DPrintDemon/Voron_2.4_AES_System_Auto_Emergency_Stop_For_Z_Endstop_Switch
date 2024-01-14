@@ -4,8 +4,9 @@ Save your printer with this Auto E STOP System to catch Z Homing errors using a 
 [<img width="171" alt="kofi_s_tag_dark" src="https://github.com/3DPrintDemon/Voron_2.4_AES_System_Auto_Emergency_Stop_For_Klicky_Probe/assets/122202359/8f542c7a-b302-49c6-94fe-76749f321f65">](https://ko-fi.com/3dprintdemon)
 ## Don't forget if you like & use this project you can buy me a beer/coffee to say thanks. https://ko-fi.com/3dprintdemon
 
-You're probably thinking you dont need this & that you printer always works & it'll be fine. Yea thats true until it isn't!
-All it takes is a single homing error or failure to totally ruin your print surface when you nozzle ploughs into it & then gets dragged round it when you strat a print!
+You're probably thinking you don't need this & that your printer always works & it'll be fine. 
+
+Yeah thats true until it isn't! All it takes is a single homing error or failure to totally ruin your print surface when your nozzle ploughs into it & then gets dragged round it when you start a print!
 
 A friend of mine just had his $70 350x350 bed totally trashed by this exact thing, for some reason his nozzle hit the endstop off-centre & the Z offset was about 3mm wrong, as you can imagine there were some bad noises & lots of broken things!
 
