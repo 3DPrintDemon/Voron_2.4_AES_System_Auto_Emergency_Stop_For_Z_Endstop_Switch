@@ -22,7 +22,7 @@ So I came up with this idea! Basically consider it an insurance policy for your 
 
 # STL FILE...
 
-Head over to printables to grab the STL: link to be added
+Head over to printables to grab the STL: https://www.printables.com/model/722483-voron-24-aes-system-sensor-mount
 
 # INSTALL
 
