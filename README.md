@@ -26,7 +26,7 @@ Head over to printables to grab the STL: https://www.printables.com/model/722483
 
 # INSTALL
 
-- Install the AES bracket onto the rear left corner of your printer's 20x20 extrusion, with about 10-15mm clearance from your B motor when the nozzle is on the bed. USE THREADLOCK!
+- Install the `AES System Sensor Mount` onto the rear left corner of your printer's 20x20 extrusion, with about 10-15mm clearance from your B motor when the nozzle is on the bed. USE THREADLOCK!
 - Now add the Probe to your bracket, set the tip of the probe so its 1mm from the housing of the B motor. USE THREADLOCK!
 - Connect the wires to your board & define the correct pin.
 - My probe's wiring was a follows. Yours may differ. Brown=+, Blue=-, Black=Signal, White=Temp.
