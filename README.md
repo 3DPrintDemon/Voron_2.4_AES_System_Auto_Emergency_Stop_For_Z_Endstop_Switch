@@ -1,4 +1,4 @@
-# Voron 2.4 AES System - Auto Emergency Stop For Klicky Probe
+# Voron 2.4 AES System - Auto Emergency Stop For Z Endstop Switch
 Save your printer with this Auto E STOP System to catch Z Homing errors using a nozzle triggered endstop switch.
 
 [<img width="171" alt="kofi_s_tag_dark" src="https://github.com/3DPrintDemon/Voron_2.4_AES_System_Auto_Emergency_Stop_For_Klicky_Probe/assets/122202359/8f542c7a-b302-49c6-94fe-76749f321f65">](https://ko-fi.com/3dprintdemon)
