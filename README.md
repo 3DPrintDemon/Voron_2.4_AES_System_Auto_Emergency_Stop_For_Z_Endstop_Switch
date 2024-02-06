@@ -14,7 +14,7 @@ So I came up with this idea! Basically consider it an insurance policy for your 
 
 The system uses an inductive probe to trigger an automatic `Emergency Stop` when it senses the gantry is too low for the correct Z triggering point when Homing Z. 
 
-The system lays ready but disarmed during normal operation & printing, then becomes armed as soon as `Home Z` is called, & it will trigger if your nozzle misses the Z endstop switch & the gantry lowers past its noraml Z triggering point. It disarms itself once Z homing is complete.
+The system lays ready but disarmed during normal operation & printing, then becomes armed as soon as `Home Z` is called, & it will trigger if your nozzle misses the Z endstop switch & the gantry lowers past its normal Z triggering point. It disarms itself once Z homing is complete.
 
 # REQUIRED PARTS
 
