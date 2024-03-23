@@ -44,12 +44,12 @@ Open the file & CTRL+F & search:
 ```
 [gcode_macro _Home_Z_]
 ```
-Then on empty `Line Number 863` add this code:
+Then on empty `Line Number 867` add this code:
 ```
 SET_GCODE_VARIABLE MACRO=_AES_SYS VARIABLE=e_stop_armed VALUE=False # AES SYSTEM
 _AES_READ # AES SYSTEM
 ```
-Now on empty `Line Number 836` add this code:
+Now on empty `Line Number 839` add this code:
 ```
 SET_GCODE_VARIABLE MACRO=_AES_SYS VARIABLE=e_stop_armed VALUE=True # AES SYSTEM
 _AES_READ # AES SYSTEM
