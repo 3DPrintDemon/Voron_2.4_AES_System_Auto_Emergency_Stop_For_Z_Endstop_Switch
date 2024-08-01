@@ -44,7 +44,12 @@ https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified
 
 # CONFIGURING THE SYSTEM
 
-This will require you to edit the `Klicky-Macros.cfg` file. Dont worry it's super simple edits. This file is located in your printer's `config` folder inside the `Klicky` folder.
+Be sure to have your Host enabled to use it's GPIO pins via a Linux Process secondary MCU. To do this follow this link.
+https://www.klipper3d.org/RPi_microcontroller.html?h=gpio#install-the-rc-script
+
+
+
+Now you need to edit the `Klicky-Macros.cfg` file. Dont worry it's super simple edits. This file is located in your printer's `config` folder inside the `Klicky` folder.
 Open the file & CTRL+F & search:
 ```
 [gcode_macro _Home_Z_]
@@ -109,6 +114,7 @@ You will obviously need to add your own pin you're using here & possibly a `!` b
 
 NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
+You'll need this now to control the relay & turn power to the probe on & off.
 BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM! Example given is a good option.
 ```
 ########################################
