@@ -31,7 +31,7 @@ Head over to printables to grab the STL: https://www.printables.com/model/722483
 
 # INSTALL
 
-Why not go big!? Install the full macro pack found here! It works on most Klipper CoreXY & bed slinger printers!
+Why not go big!? Install the full macro pack found here! It works on most Klipper CoreXY & bed slinger printers! This system is included there!
 
 https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified
 
