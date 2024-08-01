@@ -60,7 +60,8 @@ Then DOUBLE CHECK YOUR WORK!
 
 All good? Ok `Save & Exit`
 
-If you have a `Macros.cfg` add the following macros there. If you dont have a `Macros.cfg` I recommend you make one.
+If you have a `Macros.cfg` add the following macros there. If you dont have a `Macros.cfg` I recommend you make one. If you're using my `Demon_Klipper_Essentials_Unified` macro pack you do not need to add the 2 macros below (_AES_SYS & _AES_READ) as they're already included within this macro pack. You will still need to add the `EAS SYSTEM CONTROL` as well as the `Output pin` sections.
+
 ```
 [gcode_macro _AES_SYS]
 variable_e_stop_armed: False
@@ -103,6 +104,8 @@ press_gcode:
 [output_pin AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED]
 pin: !host:gpio21
 ```
+BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM! Example given is a good option.
+
 
 You will obviously need to add your own pin you're using here & possibly a `!` between the `^` & your pin number, (so e.g `^!###`) if you have a `NO Probe` (Normally Open Probe) & not a `NC Probe` (Normally Closed Probe). 
 
