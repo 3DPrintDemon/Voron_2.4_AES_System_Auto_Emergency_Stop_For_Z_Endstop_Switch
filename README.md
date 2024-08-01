@@ -104,6 +104,12 @@ press_gcode:
 # release_gcode:
    # RESPOND TYPE=COMMAND MSG="AES System READY" 
 ```
+
+You will obviously need to add your own pin you're using here & possibly a `!` between the `^` & your pin number, (so e.g `^!###`) if you have a `NO Probe` (Normally Open Probe) & not a `NC Probe` (Normally Closed Probe). 
+
+NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
+
+BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM! Example given is a good option.
 ```
 ########################################
 #    Output Pin
@@ -111,12 +117,7 @@ press_gcode:
 [output_pin AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED]
 pin: !host:gpio21
 ```
-BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM! Example given is a good option.
 
-
-You will obviously need to add your own pin you're using here & possibly a `!` between the `^` & your pin number, (so e.g `^!###`) if you have a `NO Probe` (Normally Open Probe) & not a `NC Probe` (Normally Closed Probe). 
-
-NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
 # SETTING UP THE PRINTER
 
