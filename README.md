@@ -100,6 +100,9 @@ press_gcode:
  {% if aes_vars.e_stop_armed == True %}
    {action_emergency_stop("AES System TRIGGERED!")}
  {% endif %}
+
+# release_gcode:
+   # RESPOND TYPE=COMMAND MSG="AES System READY" 
 ```
 ```
 ########################################
