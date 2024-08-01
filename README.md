@@ -37,20 +37,20 @@ https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified
 
 - Install the `AES System Sensor Mount` onto the rear left corner of your printer's 20x20 extrusion, with about 10-15mm clearance from your B motor when the nozzle is on the bed. USE THREADLOCK!
 - Now add the Probe to your sensor mount, set the tip of the probe so its 1mm from the housing of the B motor. USE THREADLOCK!
-- Install your choice of power relay or tranistor control.
+- Install your choice of power relay or transistor control.
 - Connect the wires to your board & define the correct pin.
 - My probe's wiring was as follows. Yours may differ. Brown=+, Blue=-, Black=Signal, White=Temp.
-- We dont need temp & its not good for accurate readings anyway so cut that back & insulate.
+- We don't need temp & it's not good for accurate readings anyway so cut that back & insulate.
 
 
 # CONFIGURING THE SYSTEM
 
-Be sure you have set you Klipper instance to be able to use your Host's GPIO pins via a Linux Process secondary MCU. To do this follow this link.
+Be sure you have set your Klipper instance to be able to use your Host's GPIO pins via a Linux Process secondary MCU. To do this follow this link.
 https://www.klipper3d.org/RPi_microcontroller.html?h=gpio#install-the-rc-script
 
 
 
-Now you need to edit the `Klicky-Macros.cfg` file. Dont worry it's super simple edits. This file is located in your printer's `config` folder inside the `Klicky` folder.
+Now you need to edit the `Klicky-Macros.cfg` file. Don't worry it's super simple edits. This file is located in your printer's `config` folder inside the `Klicky` folder.
 Open the file & CTRL+F & search:
 ```
 [gcode_macro _Home_Z_]
@@ -70,7 +70,7 @@ Then DOUBLE CHECK YOUR WORK!
 
 All good? Ok `Save & Exit`
 
-If you have a `Macros.cfg` add the following macros there. If you dont have a `Macros.cfg` I recommend you make one. If you're using my `Demon_Klipper_Essentials_Unified` macro pack you do not need to add the 2 macros below (_AES_SYS & _AES_READ) as they're already included within this macro pack. You will still need to add the `EAS SYSTEM CONTROL` as well as the `Output pin` sections.
+If you have a `Macros.cfg` add the following macros there. If you don't have a `Macros.cfg` I recommend you make one. If you're using my `Demon_Klipper_Essentials_Unified` macro pack you do not need to add the 2 macros below (_AES_SYS & _AES_READ) as they're already included within this macro pack. You will still need to add the `EAS SYSTEM CONTROL` as well as the `Output pin` sections.
 
 ```
 [gcode_macro _AES_SYS]
@@ -96,7 +96,7 @@ Now head over to your `Printer.cfg` file & add:
 #   AES SYSTEM CONTROL
 ########################################
 # Get Button Status with: QUERY_BUTTON button=AES_System_Sensor
-# Will retrun PRESSED or RELEASED
+# Will return PRESSED or RELEASED
 
 [gcode_button AES_System_Sensor]
 pin: ****
