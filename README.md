@@ -19,6 +19,7 @@ The system lays ready but disarmed during normal operation & printing, then beco
 # REQUIRED PARTS
 
 - LDO M8 Pinda 2 Inductive Probe (NC version used here)
+- Rpi Relay hat or single board or build a transistor power controller - https://adam-meyer.com/arduino/TIP120
 - x1 M4 8mm Cap head bolt
 - x1 M4 T-nut
 - THREADLOCK!!
@@ -68,42 +69,55 @@ gcode:
 [gcode_macro _AES_READ]
 gcode:
  {% set aes_vars = printer["gcode_macro _AES_SYS"] %}
- {% if aes_vars.e_stop_armed == True %}
-   RESPOND TYPE=COMMAND MSG="Homing Z AES System ARMED"
- {% else %}
-   RESPOND TYPE=COMMAND MSG="AES System DISAMRED"
- {% endif %}
+   
+     {% if aes_vars.e_stop_armed == True %}
+       RESPOND TYPE=COMMAND MSG="Homing Z AES System ARMED"
+       SET_PIN PIN=AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED VALUE=1.0
+     {% else %}
+       RESPOND TYPE=COMMAND MSG="AES System DISAMRED"
+       SET_PIN PIN=AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED VALUE=0.0
+     {% endif %}
 ```
 
 Now head over to your `Printer.cfg` file & add:
 ```
 ########################################
-#    AES SYSTEM CONTROL
+#   AES SYSTEM CONTROL
 ########################################
 # Get Button Status with: QUERY_BUTTON button=AES_System_Sensor
 # Will retrun PRESSED or RELEASED
 
 [gcode_button AES_System_Sensor]
-pin: ^### <<<< ADD YOUR OWN BOARD PIN HERE!!
+pin: ****
 press_gcode:
  {% set aes_vars = printer["gcode_macro _AES_SYS"] %}
    # RESPOND TYPE=COMMAND MSG="AES System TRIGGERED"
  {% if aes_vars.e_stop_armed == True %}
    {action_emergency_stop("AES System TRIGGERED!")}
  {% endif %}
-release_gcode:
-   # RESPOND TYPE=COMMAND MSG="AES System READY"
 ```
+```
+########################################
+#    Output Pin
+########################################
+[output_pin AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED]
+pin: !host:gpio21
+```
+
 You will obviously need to add your own pin you're using here & possibly a `!` between the `^` & your pin number, (so e.g `^!###`) if you have a `NO Probe` (Normally Open Probe) & not a `NC Probe` (Normally Closed Probe). 
 
 NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
 # SETTING UP THE PRINTER
 
-After adding the required lines to your .cfg files you'll need to spend some time setting the height & distance of the probe so it activates between the Z endstop switch's activation point & the nozzle touching the bed surface `Z0`.
-This can be a bit tricky & can take a bit of time.
+Now we need to wire up the probe's power to the relay or tranistor. Hook the probe up normally to your mainboard but divert the v+ line to pass through your relay using the relay's NO (Normally Open) position so it can be turned on & off via the above output pin on your host. This means you will be able to totally disable the probe from triggering when not in use & it will not flood your MCU with with switch triggers while printing. VERY IMPORTANT!
+
+After adding the required lines to your .cfg files & the probe's power control device of your choice you'll need to spend some time setting the height & distance of the probe so it activates between the Z endstop switch's activation point & the nozzle touching the bed surface `Z0`.
+This can be a bit tricky & can take a bit of time. The more accurate you are the better this system will work! It will be ONLY AS GOOD AS YOU SET IT UP!
 
 You'll need to home the printer then move the nozzle down to `Z5.0` then slowly lower it until you find the probe's triggering point & check to see if its between the two points mentioned above, if not move the probe until you get the correct position. THIS IS VITALLY IMPORTANT TO GET CORRECT!
+
+To test the probe you must be sure the `AES_SYSTEM_ENABLE_-_KLIPPER_CONTROLLED` is in the `ON` position in your mainsail interface! If not the whole system will not work as it will have no power!
 
 To check the probe activation point you can use:
 ```
