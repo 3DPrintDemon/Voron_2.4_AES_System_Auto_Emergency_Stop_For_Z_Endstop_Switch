@@ -45,7 +45,7 @@ https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified
 
 # CONFIGURING THE SYSTEM
 
-Be sure to have your Host is enabled to use it's GPIO pins via a Linux Process secondary MCU. To do this follow this link.
+Be sure you have set you Klipper instance to be able to use your Host's GPIO pins via a Linux Process secondary MCU. To do this follow this link.
 https://www.klipper3d.org/RPi_microcontroller.html?h=gpio#install-the-rc-script
 
 
