@@ -115,8 +115,9 @@ You will obviously need to add your own pin you're using here & possibly a `!` b
 
 NOTE: If you have an `NO Probe` you may also need to swap the lines of code under `press_gcode:` & `release_gcode:` for correct operation! IMPORTANT!!
 
-You'll need this now to control the relay & turn power to the probe on & off.
-BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM! Example given is a good option for a Raspberry Pi4b.
+You'll need this to allow Klipper to control the relay & turn power to the probe on & off automatically.
+Example given is a good option for a Raspberry Pi4b using a Wavshare 3 relay hat, you may or may not need the "!" for correct operaation of your relay.
+BE SURE TO CHOOSE THE CORRECT GPIO PIN FOR YOUR SYSTEM!
 ```
 ########################################
 #    Output Pin
