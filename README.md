@@ -127,7 +127,7 @@ pin: !host:gpio21
 
 # SETTING UP THE PRINTER
 
-Now we need to wire up the probe's power to the relay or tranistor. Hook the probe up normally to your mainboard but divert the v+ line to pass through your relay using the relay's NO (Normally Open) position so it can be turned on & off via the above output pin on your host. This means you will be able to totally disable the probe from triggering when not in use & it will not flood your MCU with with switch triggers while printing. VERY IMPORTANT!
+Now we need to wire up the probe's power to the relay or tranistor. Hook the probe's signle & ground connections up normally to your mainboard but divert the v+ line to pass through your relay using the relay's NO (Normally Open) position so it can be turned on & off via the above output pin on your host. This means you will be able to totally disable the probe from triggering when not in use & it will not flood your MCU with with switch triggers while printing. VERY IMPORTANT!
 
 After adding the required lines to your .cfg files & the probe's power control device of your choice you'll need to spend some time setting the height & distance of the probe so it activates between the Z endstop switch's activation point & the nozzle touching the bed surface `Z0`.
 This can be a bit tricky & can take a bit of time. The more accurate you are the better this system will work! It will be ONLY AS GOOD AS YOU SET IT UP!
