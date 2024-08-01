@@ -19,7 +19,7 @@ The system lays ready but disarmed during normal operation & printing, then beco
 # REQUIRED PARTS
 
 - LDO M8 Pinda 2 Inductive Probe (NC version used here)
-- Rpi Relay hat or single board or build a transistor power controller - https://adam-meyer.com/arduino/TIP120
+- Rpi Relay hat or single relay board, or build a transistor power controller - https://adam-meyer.com/arduino/TIP120
 - x1 M4 8mm Cap head bolt
 - x1 M4 T-nut
 - THREADLOCK!!
