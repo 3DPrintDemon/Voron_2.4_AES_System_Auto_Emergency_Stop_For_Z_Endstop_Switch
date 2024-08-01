@@ -37,6 +37,7 @@ https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified
 
 - Install the `AES System Sensor Mount` onto the rear left corner of your printer's 20x20 extrusion, with about 10-15mm clearance from your B motor when the nozzle is on the bed. USE THREADLOCK!
 - Now add the Probe to your sensor mount, set the tip of the probe so its 1mm from the housing of the B motor. USE THREADLOCK!
+- Install your choice of power relay or tranistor control.
 - Connect the wires to your board & define the correct pin.
 - My probe's wiring was as follows. Yours may differ. Brown=+, Blue=-, Black=Signal, White=Temp.
 - We dont need temp & its not good for accurate readings anyway so cut that back & insulate.
